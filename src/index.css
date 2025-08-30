@@ -180,7 +180,7 @@
 
   @media (min-width: 769px) {
     .bg-education-section {
-      background-image: url('/background_pattern.svg');
+      background-image: url('/background_rotated.svg');
     }
   }
 
