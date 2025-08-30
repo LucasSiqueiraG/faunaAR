@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Fauna AR Design System - Cores da natureza e vida selvagem */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Fauna AR - Cores principais */
+    --fauna-beige: 27 100% 93%; /* #ffedde - bege claro */
+    --fauna-green-dark: 132 48% 15%; /* #164423 - verde escuro */
+    --fauna-orange: 16 80% 54%; /* #ec6423 - laranja */
+    --fauna-brown: 28 79% 26%; /* #7d3901 - marrom escuro */
+    --fauna-green-light: 75 46% 56%; /* #a9c15a - verde claro */
+
+    /* Sistema de cores semânticas */
+    --background: var(--fauna-beige);
+    --foreground: var(--fauna-green-dark);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--fauna-green-dark);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--fauna-green-dark);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--fauna-orange);
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--fauna-green-light);
+    --secondary-foreground: var(--fauna-green-dark);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--fauna-beige);
+    --muted-foreground: var(--fauna-brown);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--fauna-green-dark);
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 27 50% 88%;
+    --input: 27 50% 88%;
+    --ring: var(--fauna-orange);
 
-    --radius: 0.5rem;
+    /* Gradientes temáticos */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--fauna-green-dark) / 0.9), hsl(var(--fauna-brown) / 0.8));
+    --gradient-nature: linear-gradient(120deg, hsl(var(--fauna-green-light) / 0.1), hsl(var(--fauna-orange) / 0.1));
+    --gradient-sunset: linear-gradient(45deg, hsl(var(--fauna-orange) / 0.3), hsl(var(--fauna-beige)));
+
+    /* Sombras orgânicas */
+    --shadow-soft: 0 4px 20px hsl(var(--fauna-green-dark) / 0.1);
+    --shadow-nature: 0 8px 32px hsl(var(--fauna-brown) / 0.15);
+    --shadow-floating: 0 12px 40px hsl(var(--fauna-orange) / 0.2);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +72,62 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Modo escuro da floresta */
+    --background: var(--fauna-green-dark);
+    --foreground: var(--fauna-beige);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 132 48% 12%;
+    --card-foreground: var(--fauna-beige);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 132 48% 12%;
+    --popover-foreground: var(--fauna-beige);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--fauna-orange);
+    --primary-foreground: var(--fauna-green-dark);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: var(--fauna-brown);
+    --secondary-foreground: var(--fauna-beige);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 132 48% 20%;
+    --muted-foreground: var(--fauna-green-light);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: var(--fauna-green-light);
+    --accent-foreground: var(--fauna-green-dark);
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--fauna-beige);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 132 48% 25%;
+    --input: 132 48% 25%;
+    --ring: var(--fauna-orange);
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--fauna-green-dark)), hsl(var(--fauna-brown)));
+    --gradient-nature: linear-gradient(120deg, hsl(var(--fauna-green-dark) / 0.3), hsl(var(--fauna-orange) / 0.2));
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-nature: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-floating: 0 12px 40px hsl(var(--fauna-orange) / 0.3);
+  }
+
+  /* Animações da vida selvagem */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-nature {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes slide-in-nature {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
   }
 }
 
@@ -100,6 +137,59 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-work-sans;
+  }
+
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Classes utilitárias do Fauna AR */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-nature {
+    background: var(--gradient-nature);
+  }
+
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-nature {
+    box-shadow: var(--shadow-nature);
+  }
+
+  .shadow-floating {
+    box-shadow: var(--shadow-floating);
+  }
+
+  /* Animações */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-nature {
+    animation: pulse-nature 2s ease-in-out infinite;
+  }
+
+  .animate-slide-in {
+    animation: slide-in-nature 0.8s ease-out;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: all 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-floating);
   }
 }
