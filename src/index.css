@@ -181,6 +181,8 @@
   @media (min-width: 769px) {
     .bg-education-section {
       background-image: url('/background_rotated.svg');
+      background-size: 76% auto;
+      background-position: left center;
     }
   }
 
