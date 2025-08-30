@@ -170,6 +170,20 @@
     box-shadow: var(--shadow-floating);
   }
 
+  .bg-education-section {
+    background-color: #fee6d2;
+    background-image: url('/background_rotated.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 769px) {
+    .bg-education-section {
+      background-image: url('/background_pattern.svg');
+    }
+  }
+
   /* Animações */
   .animate-float {
     animation: float 3s ease-in-out infinite;

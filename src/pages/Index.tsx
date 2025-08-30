@@ -82,7 +82,10 @@ const Index = () => {
       </section>
 
       {/* Seção Educacional */}
-      <section id="educacao" className="py-20 bg-background">
+      <section 
+        id="educacao" 
+        className="py-20 relative bg-education-section"
+      >
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-slide-in">
             <h2 className="font-oswald font-bold text-4xl md:text-5xl mb-6 text-foreground">
