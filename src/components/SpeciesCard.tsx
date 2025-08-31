@@ -47,9 +47,7 @@ const SpeciesCard = ({
           {description}
         </p>
         
-        <button className="w-full mt-4 bg-primary text-primary-foreground py-2 rounded-lg font-work-sans font-medium hover:bg-primary/90 transition-colors">
-          Ver em AR
-        </button>
+ 
       </div>
     </div>
   );

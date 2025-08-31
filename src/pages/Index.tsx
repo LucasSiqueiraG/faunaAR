@@ -125,6 +125,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Espécies em Destaque */}
+      <section id="especies" className="py-20 gradient-nature">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-slide-in">
+            <h2 className="font-oswald font-bold text-4xl md:text-5xl mb-6 text-foreground">
+              Conheça as 
+              <span className="text-primary"> Espécies</span>
+            </h2>
+            <p className="font-work-sans text-xl text-muted-foreground max-w-3xl mx-auto">
+              Cada espécie tem uma história única de resistência e esperança. 
+              Explore suas características em Realidade Aumentada
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <SpeciesCard
+              name="Arara-Azul"
+              scientificName="Anodorhynchus hyacinthinus"
+              status="Vulnerável"
+              description="A maior arara do mundo, símbolo do Pantanal brasileiro. Sua população se recupera graças a projetos de conservação."
+              delay={0}
+            />
+            
+            <SpeciesCard
+              name="Mico-Leão-Dourado"
+              scientificName="Leontopithecus rosalia"
+              status="Em Perigo"
+              description="Endêmico da Mata Atlântica do Rio de Janeiro, este primata dourado é um símbolo de conservação bem-sucedida."
+              delay={200}
+            />
+            
+            <SpeciesCard
+              name="Onça-Pintada"
+              scientificName="Panthera onca"
+              status="Quase Ameaçada"
+              description="O maior felino das Américas, predador-chave dos ecossistemas brasileiros, enfrenta perda de habitat."
+              delay={400}
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Call-to-Action Final */}
       <section id="cta-final" className="py-20 bg-accent text-accent-foreground">
