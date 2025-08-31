@@ -27,37 +27,49 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-oswald font-bold text-lg">F</span>
-            </div>
-            <h1 className="font-oswald font-bold text-xl text-foreground">Fauna AR</h1>
+            <img 
+              src="/logo.webp" 
+              alt="Fauna AR Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <h1 className={`font-oswald font-bold text-xl transition-colors ${
+              isScrolled ? 'text-foreground' : 'text-white'
+            }`}>Fauna AR</h1>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('sobre')}
-              className="font-work-sans text-foreground hover:text-primary transition-colors"
+              className={`font-work-sans hover:text-primary transition-colors ${
+                isScrolled ? 'text-foreground' : 'text-white'
+              }`}
             >
               Sobre
             </button>
             <button 
               onClick={() => scrollToSection('educacao')}
-              className="font-work-sans text-foreground hover:text-primary transition-colors"
+              className={`font-work-sans hover:text-primary transition-colors ${
+                isScrolled ? 'text-foreground' : 'text-white'
+              }`}
             >
               Educação
             </button>
             <button 
               onClick={() => scrollToSection('especies')}
-              className="font-work-sans text-foreground hover:text-primary transition-colors"
+              className={`font-work-sans hover:text-primary transition-colors ${
+                isScrolled ? 'text-foreground' : 'text-white'
+              }`}
             >
               Espécies
             </button>
-            <button 
-              onClick={() => scrollToSection('cta-final')}
+            <a 
+              href="https://app.faunar.site"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-full font-work-sans font-medium hover:bg-primary/90 transition-colors shadow-soft hover-lift"
             >
               Iniciar Experiência
-            </button>
+            </a>
           </div>
 
           {/* Menu mobile */}

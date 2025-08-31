@@ -31,12 +31,14 @@ const Index = () => {
             nossa biodiversidade através da tecnologia
           </p>
           
-          <button 
-            onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-oswald font-bold text-lg hover:bg-primary/90 transition-all duration-300 shadow-floating hover-lift animate-float"
+          <a 
+            href="https://app.faunar.site"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-oswald font-bold text-lg hover:bg-primary/90 transition-all duration-300 shadow-floating hover-lift animate-float inline-block"
           >
             Iniciar Experiência
-          </button>
+          </a>
         </div>
       </section>
 
@@ -181,13 +183,23 @@ const Index = () => {
             </p>
             
             <div className="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
-              <button className="w-full sm:w-auto bg-primary text-primary-foreground px-10 py-4 rounded-full font-oswald font-bold text-lg hover:bg-primary/90 transition-all duration-300 shadow-floating hover-lift animate-float">
+              <a 
+                href="https://app.faunar.site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto bg-primary text-primary-foreground px-10 py-4 rounded-full font-oswald font-bold text-lg hover:bg-primary/90 transition-all duration-300 shadow-floating hover-lift animate-float inline-block text-center"
+              >
                 Iniciar Agora
-              </button>
+              </a>
               
-              <button className="w-full sm:w-auto border-2 border-primary text-primary px-10 py-4 rounded-full font-oswald font-bold text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              <a 
+                href="https://app.faunar.site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto border-2 border-primary text-primary px-10 py-4 rounded-full font-oswald font-bold text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 inline-block text-center"
+              >
                 Saiba Mais
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -198,14 +210,16 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-oswald font-bold">F</span>
-              </div>
+              <img 
+                src="/logo.webp" 
+                alt="Fauna AR Logo" 
+                className="w-8 h-8 object-contain"
+              />
               <span className="font-oswald font-bold text-lg text-foreground">Fauna AR</span>
             </div>
             
             <p className="font-work-sans text-muted-foreground text-center">
-              © 2024 Fauna AR • Contribuindo para o ODS 15: Vida Terrestre
+              © 2025 Fauna AR • Contribuindo para o ODS 15: Vida Terrestre
             </p>
           </div>
         </div>
