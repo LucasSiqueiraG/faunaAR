@@ -28,13 +28,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/logo.webp" 
+              src={isScrolled ? "/logo_black.webp" : "/logo_white.webp"}
               alt="Fauna AR Logo" 
-              className="w-10 h-10 object-contain"
+              className="w-8 h-8 object-contain transition-transform duration-300"
+              style={{ transform: 'scale(4)' }}
             />
-            <h1 className={`font-oswald font-bold text-xl transition-colors ${
-              isScrolled ? 'text-foreground' : 'text-white'
-            }`}>Fauna AR</h1>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

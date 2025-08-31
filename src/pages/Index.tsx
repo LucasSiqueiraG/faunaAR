@@ -211,11 +211,11 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-3">
               <img 
-                src="/logo.webp" 
+                src="/logo_black.webp" 
                 alt="Fauna AR Logo" 
-                className="w-8 h-8 object-contain"
+                className="w-8 h-8 object-contain transition-transform duration-300"
+                style={{ transform: 'scale(4)' }}
               />
-              <span className="font-oswald font-bold text-lg text-foreground">Fauna AR</span>
             </div>
             
             <p className="font-work-sans text-muted-foreground text-center">
